@@ -1,7 +1,8 @@
 # Create PostgreSQL database on Azure. 
 <li>using variables to make settings configurable.
 <li>Can be used as a module
-<br>
+<br><br>
+
 # Outputs
 <li>PSQL ID
 <li>PSQL FQDN
