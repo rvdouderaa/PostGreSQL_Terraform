@@ -2,6 +2,16 @@ provider "azurerm" {
   features {}
 }
 
+data "azurerm_key_vault" "keyvault" {
+    name                = var.key_vault_name
+    resource_group_name = var.key_vault_resource_group
+}
+
+data "azurerm_key_vault_secret" "secret" {
+    name            = var.administrator_login
+    key_vault_id    = data.azurerm_key_vault.keyvault.id
+}
+
 resource "azurerm_resource_group" "psql" {
   name     = var.resource_group_name
   location = var.location
@@ -13,7 +23,7 @@ resource "azurerm_postgresql_server" "psql" {
   resource_group_name = azurerm_resource_group.psql.name
 
   administrator_login          = var.administrator_login
-  administrator_login_password = var.administrator_login_password
+  administrator_login_password = data.azurerm_key_vault_secret.secret.value
 
   sku_name   = var.sku
   version    = var.psql_version
