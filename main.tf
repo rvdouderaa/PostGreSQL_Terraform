@@ -41,3 +41,11 @@ resource "azurerm_postgresql_server" "psql" {
       ApplicationName = var.ApplicationName
   }
 }
+
+resource "azurerm_postgresql_database" "psql" {
+  name                = var.database_name
+  resource_group_name = var.resource_group_name
+  server_name         = var.servername
+  charset             = var.database_charset
+  collation           = var.database_collation
+}

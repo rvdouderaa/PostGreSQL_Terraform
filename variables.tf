@@ -51,3 +51,12 @@ variable "key_vault_name" {
 variable "key_vault_resource_group" {
     type = string
 }
+variable "database_name" {
+    type = string
+}
+variable "database_charset" {
+    type = string
+}
+variable "database_collation" {
+    type = string
+}
