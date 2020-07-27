@@ -11,3 +11,20 @@
 psql_fqdn = server1-we-psql.postgres.database.azure.com
 psql_id = /subscriptions/821279ca-1e18-4683-82d7-49d9998bf5f7/resourceGroups/psql-we-prd-rg/providers/Microsoft.DBforPostgreSQL/servers/server1-we-psql
 ````
+
+<br><br>
+
+# CheckOV
+```
+      _               _
+   ___| |__   ___  ___| | _______   __
+  / __| '_ \ / _ \/ __| |/ / _ \ \ / /
+ | (__| | | |  __/ (__|   < (_) \ V /
+  \___|_| |_|\___|\___|_|\_\___/ \_/
+
+by bridgecrew.io | version: 1.0.457
+
+terraform scan results:
+
+Passed checks: 1, Failed checks: 0, Skipped checks: 0
+```
