@@ -1,0 +1,13 @@
+resource_group_name             = "psql-we-prd-rg"
+location                        = "West Europe"
+servername                      = "server1-we-psql"
+sku                             = "GP_Gen5_4"
+psql_version                    = "11"
+storage_mb                      = 5120
+backup_retention_days           = 7
+geo_redundant_backup_enabled    = true
+auto_grow_enabled               = true
+public_network_access_enabled   = false
+ApplicationName                 = "GeoGap"
+administrator_login             = "locadm"
+administrator_login_password    = "SQLP@ssw0rd!"
